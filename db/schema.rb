@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2024_03_15_121726) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
+    t.string "author"
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -22,6 +23,7 @@ ActiveRecord::Schema.define(version: 2024_03_15_121726) do
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
+    t.string "author"
     t.text "body"
     t.integer "article_id", null: false
     t.datetime "created_at", precision: 6, null: false
