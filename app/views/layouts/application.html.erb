@@ -10,6 +10,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div class="TopBar">
+    <ul>
+      <li><%= link_to "Home", articles_path %></li>
+      <li><%= link_to "Post", new_article_path %></li>
+    </ul>
+  </div> 
+  
+
+
   <body>
     <%= yield %>
   </body>
