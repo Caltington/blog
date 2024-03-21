@@ -1,7 +1,7 @@
 <h1>Admin Panel</h1>
 There are currently a total of <%= Article.real_count%> posts on the site and <%= Comment.real_count%> comments. </br>
-<%= Article.public_count%> posts are public and <%=Comment.public_count%> comments are public</br>
-<%= Article.archived_count%> posts are archived and <%=Comment.archived_count%> comments are archived</br>
-<%= Article.private_count%> posts are privated and <%=Comment.private_count%> comments are private</br>
+<%= Article.public_count%> posts are public</br>
+<%= Article.archived_count%> posts are archived</br>
+<%= Article.private_count%> posts are privated</br>
 <%= link_to "View Archived posts", "archive" %>
 <%= link_to "View Privated posts", "private" %>
