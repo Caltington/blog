@@ -1,3 +1,4 @@
+<h>THE AMAZING BLOG</h1>
 so basically do this
   cd blog
   rails s
