@@ -1,7 +1,7 @@
 <%= form_with model: article do |form| %>
   <div>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: "My Post 1" %>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -9,7 +9,7 @@
 
   <div>
     <%= form.label :author %><br>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, placeholder: "Dave"%>
     <% article.errors.full_messages_for(:author).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -17,7 +17,7 @@
 
   <div>
     <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
+    <%= form.text_area :body, placeholder: "I love this site so much!" %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
