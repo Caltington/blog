@@ -1,9 +1,9 @@
-<h1>Callum's great blog website</h1>
+<center><h1>Callum's great blog website</h1></center>
 
-This blog has <%= Article.public_count %> articles available with <%=Comment.public_count%> comments!<br/>
-<a href="articles/new">
+<center>This blog has <%= Article.public_count %> articles available with <%=Comment.public_count%> comments!<br/></center>
+<center><a href="articles/new">
     <button><h3>New Post<h3></button>
-</a>
+</a></center>
 
 <%@articles.each do |article| %>
     <% unless article.archived? or article.private?%>
