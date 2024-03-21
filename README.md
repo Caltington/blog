@@ -1,24 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+so basically do this
+  cd blog
+  rails s
+pretty simple to run and then visit localhost, once done you get my supermduper cool website which i gurantee you will love (cool right)
+ive ran out of things to say
+- Kinda Regards Callum the Wise
