@@ -16,6 +16,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    if @article.private?
+      http_basic_authenticate_or_request_with name: "dhh", password: "secret"
+    end
   end
 
   def new
