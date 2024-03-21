@@ -6,6 +6,14 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def private
+    @articles = Article.all
+  end
+
+  def archive
+    @articles = Article.all
+  end
+
   def show
     @article = Article.find(params[:id])
   end

@@ -1,13 +1,16 @@
-<h1>HELLOOOOOOOOO</h1>
+<h1>Callum's great blog website</h1>
 
-This blog has <%= Article.public_count %> articles available
+This blog has <%= Article.public_count %> articles available with <%=Comment.public_count%> comments!<br/>
+<a href="articles/new">
+    <button><h3>New Post<h3></button>
+</a>
 
 <%@articles.each do |article| %>
-    <% unless article.archived? %>
-      <h2> <%=link_to article.title, article %> </h2>
-      <h3> By <%=article.author %> </h3>
-      <body> <%=article.body.truncate(300) %>...<body>
+    <% unless article.archived? or article.private?%>
+    <div class="Article">
+      <h2><%=link_to article.title, article%> </h2>
+      <h4>By <%= article.author %> </h4>
+      <body><%=article.body.truncate(300) %>...<body>
+    </div>
   <% end %>
 <% end %>
-
-<%= link_to "New Article", new_article_path %>
