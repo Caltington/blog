@@ -9,7 +9,11 @@
                   %>
 <%end%>
 <h2>Comments</h2>
-<%= render @article.comments %>
+<%if @article.comments.empty?%>
+  <p>Nobody has commented yet!</p>
+<%else%>
+  <%= render @article.comments %>
+<%end%>
 <%unless @article.archived?%>
   <h1>Add a comment</h1>
   <%= render 'comments/form' %>
