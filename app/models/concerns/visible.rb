@@ -11,6 +11,13 @@ module Visible
         def public_count
             where(status: 'public').count
         end
+        def private_count
+            where(status: 'private').count
+        end
+        def archived_count
+            where(status: 'archived').count
+        end
+        
         def real_count
             where(status: VALID_STATUSES).count
         end
