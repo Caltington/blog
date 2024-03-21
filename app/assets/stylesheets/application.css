@@ -73,3 +73,9 @@ h4 {
 button {
   size: 100px;
 }
+
+.comment {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  max-width: 300px;
+}

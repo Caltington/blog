@@ -1,15 +1,17 @@
 <center><h1><%=@article.title %></h1>
 <body>By</body> <i><%= @article.author %></i>
 <p><%=@article.body%></p>
-
-<%= link_to "Edit", edit_article_path(@article) %>
-<%= button_to "Destroy", article_path(@article),
+<%unless @article.archived?%>
+  <%= link_to "Edit", edit_article_path(@article) %>
+  <%= button_to "Destroy", article_path(@article),
                     method: :delete,
                     data: {confirm: "Are you sure?"}
                    %>
-
+<%end%>
 <h2>Comments</h2>
 <%= render @article.comments %>
-
-<h1>Add a comment</h1>
-<%= render 'comments/form' %></center>
+<%unless @article.archived?%>
+  <h1>Add a comment</h1>
+  <%= render 'comments/form' %>
+<%end%>
+</center>
