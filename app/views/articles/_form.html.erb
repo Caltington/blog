@@ -9,7 +9,7 @@
 
   <div>
     <%= form.label :author %><br>
-    <%= form.text_field :author, placeholder: "Dave"%>
+    <%= form.text_field :author, placeholder: "Dave the first"%>
     <% article.errors.full_messages_for(:author).each do |message| %>
       <div><%= message %></div>
     <% end %>
