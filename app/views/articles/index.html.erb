@@ -7,15 +7,22 @@
 
 <%@articles.each do |article| %>
     <% unless article.archived? or article.private?%>
-    <div class="Article">
-      <h2><%=link_to article.title, article%> </h2>
-      <h4>By <%= article.author %> </h4>
+  <center>
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
+      <div class="CoolTitle"> <h5 class="card-title"><%=article.title%></h5> </div>
+      </br>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%=article.author%></h6>
+      <p class="card-text">
       <%if article.body.length > 300%>
         <body><%=article.body.truncate(500)%></body>
       <%else%>
-        <body><%=article.body%></body>
+        <body><%=article.body%></body></p>
       <%end%>
+      <%=link_to "Read More", article%> 
     </div>
-    </br>
+  </div>
+  </br>
+  </center>
   <% end %>
 <% end %>

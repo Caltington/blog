@@ -52,15 +52,6 @@ li a:hover {
   padding: 5px;
 }
 
-.Article {
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px;
-  margin: auto;
-  border-radius: 20px;
-  max-width: 50%;
-}
-
 .ArticleShow {
   text-align: center;
   border: 1px solid black;
