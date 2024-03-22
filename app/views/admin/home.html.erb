@@ -3,5 +3,9 @@ There are currently a total of <%= Article.real_count%> posts on the site and <%
 <%= Article.public_count%> posts are public</br>
 <%= Article.archived_count%> posts are archived</br>
 <%= Article.private_count%> posts are privated</br>
-<%= link_to "View Archived posts", "archive" %>
-<%= link_to "View Privated posts", "private" %>
+<a href="archive">
+    <button type="button" class="btn btn-primary btn-lg">View Archived Posts</button>
+</a>
+<a href="private">
+    <button type="button" class="btn btn-primary btn-lg">View Privated Posts</button>
+</a>

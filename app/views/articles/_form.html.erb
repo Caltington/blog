@@ -1,3 +1,33 @@
+<!--
+
+<form class="form-horizontal">
+  <div class="col-md-4">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" required>
+  </div>
+  <div class="col-md-4">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" class="form-control" id="author" required>
+  </div>
+  <div class="col-md-6">
+    <label for="body" class="form-label">Body</label>
+    <textarea type="text" class="form-control" id="body" required></textarea>
+  </div>
+  <div class="col-md-3">
+    <label for="status" class="form-label">Visibility</label>
+    <select class="form-select" id="status" required>
+      <option selected disabled value="">Choose Visibility</option>
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+      <option value="archived">Archived</option>
+    </select>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+-->
+
 <%= form_with model: article do |form| %>
   <div>
     <%= form.label :title %><br>

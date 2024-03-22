@@ -2,7 +2,7 @@
 
 <center>This blog has <%= Article.public_count %> articles available with <%=Comment.public_count%> comments!<br/></center>
 <center><a href="articles/new">
-    <button><h3>New Post<h3></button>
+    <button type="button" class="btn btn-primary btn-lg">New post</button>
 </a></center>
 
 <%@articles.each do |article| %>
@@ -10,7 +10,11 @@
     <div class="Article">
       <h2><%=link_to article.title, article%> </h2>
       <h4>By <%= article.author %> </h4>
-      <body><%=article.body.truncate(300) %>...<body>
+      <%if article.body.length > 300%>
+        <body><%=article.body.truncate(500)%></body>
+      <%else%>
+        <body><%=article.body%></body>
+      <%end%>
     </div>
     </br>
   <% end %>

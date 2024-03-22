@@ -1,16 +1,26 @@
-<center><h1><%=@article.title %></h1>
-<body>By</body> <i><%= @article.author %></i>
-<p><%=@article.body%></p>
-<%unless @article.archived?%>
-  <%= button_to "Edit", edit_article_path(@article), :method => "get" %>
-  <%= button_to "Destroy", article_path(@article),
-                    method: :delete,
-                    data: {confirm: "Are you sure?"}
-                  %>
-<%end%>
-<%if @article.archived?%>
-  <%= button_to "Unarchive", edit_article_path(@article), :method => "get" %>
-<%end%>
+<script>
+function Edit() {
+  window.location.href = "/articles/<%=@article.id%>/edit";
+}
+</script>
+</br>
+<div class="ArticleShow">
+  <center><div class="CoolTitle"> <h1><%=@article.title %></h1></div>
+  <body>By</body> <i><%= @article.author %></i>
+  <p><%=@article.body%></p>
+  <%unless @article.archived?%>
+    <button type="button" onclick="Edit()" class="btn btn-primary btn-lg">Edit</button>
+    <%= button_to "Destroy", article_path(@article),
+                    method: :delete
+                    %>
+  <%end%>
+  <%if @article.archived?%>
+    <button type="button" onclick="Edit()" class="btn btn-primary btn-lg">Unarchive</button>
+  <%end%>
+  </center>
+</div>
+</br>
+<center>
 <h2>Comments</h2>
 <%if @article.comments.empty?%>
   <p>Nobody has commented yet!</p>
