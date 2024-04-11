@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "articles#index"
   get 'private', to: 'articles#private'
   get 'archive', to: 'articles#archive'
+  get 'formtest', to: 'admin#formtest'
   resources :articles do
     resources :comments
   end
