@@ -9,8 +9,9 @@ function Edit() {
   <body>By</body> <i><%= @article.author %></i>
   <p><%=@article.body%></p>
   <%unless @article.archived?%>
-    <button type="button" onclick="Edit()" class="btn btn-primary">Edit</button>
-    <br>‎ ‎ ‎  
+    <div class="buttonspacing">
+      <button type="button" onclick="Edit()" class="btn btn-primary">Edit</button>
+    </div>
     <%= button_to "Destroy", article_path(@article),
                     method: :delete,
                     class: "btn btn-primary"

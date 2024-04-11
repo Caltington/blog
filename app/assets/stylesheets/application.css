@@ -86,3 +86,7 @@ button {
   border-bottom: 2px solid black;
   max-width: 300px;
 }
+
+.buttonspacing {
+  margin: 5px;
+}
