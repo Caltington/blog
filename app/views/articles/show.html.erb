@@ -10,8 +10,10 @@ function Edit() {
   <p><%=@article.body%></p>
   <%unless @article.archived?%>
     <button type="button" onclick="Edit()" class="btn btn-primary btn-lg">Edit</button>
+    <br>‎ ‎ ‎  
     <%= button_to "Destroy", article_path(@article),
-                    method: :delete
+                    method: :delete,
+                    class: "btn btn-primary btn-lg"
                     %>
   <%end%>
   <%if @article.archived?%>
