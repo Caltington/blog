@@ -9,15 +9,15 @@ function Edit() {
   <body>By</body> <i><%= @article.author %></i>
   <p><%=@article.body%></p>
   <%unless @article.archived?%>
-    <button type="button" onclick="Edit()" class="btn btn-primary btn-lg">Edit</button>
+    <button type="button" onclick="Edit()" class="btn btn-primary">Edit</button>
     <br>‎ ‎ ‎  
     <%= button_to "Destroy", article_path(@article),
                     method: :delete,
-                    class: "btn btn-primary btn-lg"
+                    class: "btn btn-primary"
                     %>
   <%end%>
   <%if @article.archived?%>
-    <button type="button" onclick="Edit()" class="btn btn-primary btn-lg">Unarchive</button>
+    <button type="button" onclick="Edit()" class="btn btn-primary">Unarchive</button>
   <%end%>
   </center>
 </div>

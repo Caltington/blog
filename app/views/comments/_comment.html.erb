@@ -11,7 +11,7 @@
         <p>
             <%unless @article.archived?%>
                 <%= link_to "Delete".html_safe, [comment.article, comment], data: {
-                          turbo_method: :delete}, :class=>"btn btn-primary btn-md" %>
+                          turbo_method: :delete}, :class=>"btn btn-primary" %>
             <%end%>
         </p>
     </div>
