@@ -10,10 +10,8 @@
         </p>
         <p>
             <%unless @article.archived?%>
-                <%= link_to "Destroy Comment", [comment.article, comment], data: {
-                          turbo_method: :delete,
-                          turbo_confirm: "Are you sure?"
-                        } %>
+                <%= link_to "Delete".html_safe, [comment.article, comment], data: {
+                          turbo_method: :delete}, :class=>"btn btn-primary btn-md" %>
             <%end%>
         </p>
     </div>
