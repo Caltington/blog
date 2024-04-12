@@ -1,3 +1,5 @@
+<% content_for(:html_title) { 'Archive' } %>
+
 <center><h1>Archived Posts</h1></center>
 <center>There are <%= Article.archived_count %> articles archived</center>
 <center><%@articles.each do |article| %>

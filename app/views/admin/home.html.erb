@@ -1,3 +1,5 @@
+<% content_for(:html_title) { 'Admin' } %>
+
 <h1>Admin Panel</h1>
 ‎ There are currently a total of <%= Article.real_count%> posts on the site and <%= Comment.real_count%> comments. </br>
 ‎ <%= Article.public_count%> posts are public</br>

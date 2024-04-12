@@ -1,3 +1,5 @@
+<% content_for(:html_title) { 'Search' } %>
+
 <center><h1>Search Results for "<%=params[:query]%>"</h1>
 
 <%results = Article.search(params[:query])%>

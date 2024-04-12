@@ -1,3 +1,5 @@
+<% content_for(:html_title) { @article.title } %>
+
 <script>
 function Edit() {
   window.location.href = "/articles/<%=@article.id%>/edit";

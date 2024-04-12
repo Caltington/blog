@@ -1,3 +1,5 @@
+<% content_for(:html_title) { 'Private' } %>
+
 <center><h1>Private Posts</h1></center>
 <center>There are <%= Article.private_count %> articles privated</center>
 <%@articles.each do |article| %>
