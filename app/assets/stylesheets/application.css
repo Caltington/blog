@@ -67,3 +67,9 @@ button {
 .c-flex {
   width: 30%;
 }
+
+.turbo-progress-bar {
+  height: 5px;
+  background-color: rgb(138, 229, 234);
+  visibility: visible;
+}
