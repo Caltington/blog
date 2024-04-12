@@ -1,26 +1,16 @@
-<center><h1>Search Results for "<%=params[:query]%>"</h1>
+<center><h1>Search Results for </br>"<%=params[:allquery]%>"</h1>
 
-<%results = Article.search(params[:query])%>
+<%results = Article.search(params[:allquery])%>
 
-
-<%count = results.total_count%>
-
-<% results.each do |article| %>
-    <%if article.private?%>
-        <%count = count - 1%>
-    <%end%>
-<%end%>
-
-<%=count %> posts were found in <%=results.took%> milliseconds!</br>
+<%=results.total_count %> posts were found in <%=results.took%> milliseconds!</br>
 
 </br>
 
-<% if count == 0 then %>
-    <h1>No articles match that query!</h1></br><a href="/" class="btn btn-primary btn-lg">Return Home</a>
+<% if results.total_count == 0 then %>
+    <h1>No articles match that query!</h1></br><a href="/admin" class="btn btn-primary btn-lg">Return To Admin</a>
 <% end %>
 </center>
 <% results.each do |article| %>
-    <% unless article.private?%>
   <center>
   <div class="card border-dark" style="width: 60rem;">
     <div class="card-body">
@@ -37,6 +27,5 @@
   </div>
   </br>
   </center>
-  <% end %>
 <% end %>
 

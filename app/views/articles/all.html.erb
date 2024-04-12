@@ -1,9 +1,12 @@
-<center><h1>Callum's great blog website</h1>
+<center><h1>All posts on the site</h1>
 
-This blog has <%= Article.public_count %> articles available with <%=Comment.public_count%> comments!<br/>
-<a href="articles/new" class="btn btn-primary btn-lg">New post</a></center></br>
+There is a total of <%= Article.count %> articles with <%=Comment.count%> comments!<br/>
+<form class="c-flex" role="search" action="/allsearch">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="query", name="allquery" >
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+</center> 
 <%@articles.each do |article| %>
-    <% unless article.archived? or article.private?%>
   <center>
   <div class="card border-dark" style="width: 60rem;">
     <div class="card-body">
@@ -20,5 +23,4 @@ This blog has <%= Article.public_count %> articles available with <%=Comment.pub
   </div>
   </br>
   </center>
-  <% end %>
 <% end %>

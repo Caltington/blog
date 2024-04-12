@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root "articles#index"
   get 'private', to: 'articles#private'
   get '/search', to: 'articles#search'
+  get '/allsearch', to: 'articles#allsearch'
   get 'archive', to: 'articles#archive'
+  get 'all', to: 'articles#all'
   resources :articles do
     resources :comments
   end

@@ -90,3 +90,7 @@ button {
 .buttonspacing {
   margin: 5px;
 }
+
+.c-flex {
+  width: 30%;
+}

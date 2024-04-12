@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show, :search]
 
   def search
     
@@ -15,6 +15,10 @@ class ArticlesController < ApplicationController
   end
 
   def archive
+    @articles = Article.all
+  end
+
+  def all
     @articles = Article.all
   end
 
