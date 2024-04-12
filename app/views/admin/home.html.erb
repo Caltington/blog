@@ -5,12 +5,9 @@
 ‎ <%= Article.public_count%> posts are public</br>
 ‎ <%= Article.archived_count%> posts are archived</br>
 ‎ <%= Article.private_count%> posts are privated</br>
-<a href="all">
-    <button type="button" class="btn btn-primary btn-sm">View All Posts</button>
-</a>
-<a href="archive">
-    <button type="button" class="btn btn-primary btn-sm">View Archived Posts</button>
-</a>
-<a href="private">
-    <button type="button" class="btn btn-primary btn-sm">View Privated Posts</button>
-</a>
+
+<div class="btn-group">
+  <a href="all" class="btn btn-primary">View All Posts</a>
+  <a href="archive" class="btn btn-primary">View Archived posts</a>
+  <a href="private" class="btn btn-primary">View Privated Posts</a>
+</div>
