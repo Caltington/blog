@@ -3,11 +3,19 @@
 <%results = Article.search(params[:query])%>
 <center>
 
-<%=results.total_count %> posts were found in <%=results.took%> milliseconds!</br>
+<%count = results.total_count%>
+
+<% results.each do |article| %>
+    <%if article.private?%>
+        <%count = count - 1%>
+    <%end%>
+<%end%>
+
+<%=count %> posts were found in <%=results.took%> milliseconds!</br>
 </center>
 </br>
 
-<% if results.total_count == 0 then %>
+<% if count == 0 then %>
     <center><h1>No posts match that query!</h1></center>
 <% end %>
 
