@@ -11,4 +11,4 @@ I'll list everything this does:
 - Method to find posts if they are archived and private
 </br>
 * Kinda Regards Callum the Wise
-</br>*For legal reasons my name is not Sean but it says that because I was pushing through visual studio*
+</br><i>For legal reasons my name is not Sean but it says that because I was pushing through visual studio</i>
