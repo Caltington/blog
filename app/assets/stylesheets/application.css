@@ -70,6 +70,11 @@ button {
 
 .turbo-progress-bar {
   height: 5px;
-  background-color: rgb(138, 229, 234);
-  visibility: visible;
+  background-color: green;
+}
+
+
+turbo-frame {
+  display: block;
+  border: 1px solid blue;
 }
